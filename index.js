@@ -17,6 +17,11 @@ const error = document.getElementById('error')
 
 
 input.addEventListener('change', () => {
+
+    function formatNumber(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+      }
+
     inputMiles = input.value
     const miles = mileage - inputMiles
     const availableDays = Math.floor(miles / mpd)
@@ -30,7 +35,7 @@ input.addEventListener('change', () => {
         over.classList.remove('show')
     }else {
         if (miles >= 0 && availableDays > 0) {
-            milesUnder.innerHTML = miles
+            milesUnder.innerHTML = formatNumber(miles)
             under.classList.add('show')
             under.classList.remove('hide')
             over.classList.add('hide')
@@ -38,7 +43,8 @@ input.addEventListener('change', () => {
             error.classList.add('hide')
             
         } else {
-            milesOver.innerHTML = Math.abs(miles)
+            const negMiles = Math.abs(miles)
+            milesOver.innerHTML = formatNumber(negMiles)
             over.classList.add('show')
             over.classList.remove('hide')
             under.classList.add('hide')
