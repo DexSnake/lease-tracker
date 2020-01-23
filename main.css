@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    border: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow:none;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    line-height: 1.2;
+    background-color: #1A3D54;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1024px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+h1 {
+    color: #FFCD00;
+    font-size: 4rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.car {
+    height: 175px;
+    width: 175px;
+}
+
+#input {
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 3rem;
+    text-align: center;
+    background-color: #152734;
+    color: #fff;
+}
+
+#input::-moz-placeholder, #input::-webkit-input-placeholder {
+    color: #f4f4f4;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.check {
+    fill: #ADFF97;
+    height: 120px;
+    margin: 1.4rem 0;
+}
+
+.warning {
+    fill: #FFA600;
+    height: 120px;
+    margin: 1.4rem 0;
+}
+
+#error {
+    color: #f76161;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+
+}
+
+.miles {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+}
+
+#milesUnder {
+    color: #ADFF97;
+    font-weight: bold;
+}
+
+#milesOver {
+    color: #FFBC55;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .warning, .check {
+        height: 100px;
+    }
+}
